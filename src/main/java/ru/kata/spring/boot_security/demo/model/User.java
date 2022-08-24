@@ -36,11 +36,9 @@ public class User implements UserDetails {
     @Column(name = "password")
     private String password;
 
-    @Override
     public String getUsername() {
         return username;
     }
-
     public User(Integer id, String name, String surname, Integer salary, String department, String username, String password, List<Role> roles) {
         this.id = id;
         this.name = name;
@@ -77,7 +75,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return roles;
     }
 
     public String getPassword() {
@@ -154,6 +152,7 @@ public class User implements UserDetails {
                 ", surname='" + surname + '\'' +
                 ", salary=" + salary +
                 ", department='" + department + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
 }
