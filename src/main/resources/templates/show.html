@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<p th:text="${user.getName()}">Value</p>
+<p th:text="${user.getFirstName()}">Value</p>
 <a th:href="@{/admin/{id}/edit(id=${user.getId()})}">
     <input type="submit" value="Update"></a>
 <br><hr>
