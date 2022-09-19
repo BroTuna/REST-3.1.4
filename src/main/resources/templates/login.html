@@ -20,7 +20,7 @@
             <br>
             <br>
             <form th:method="POST" class="form-signin" th:action="@{/}">
-                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+<!--                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">-->
                 <h3><p><strong>Please sign in</strong></p></h3>
                 <input type="email" name="email" class="form-control"  placeholder="Email address" required autofocus>
                 <input type="password" name="password" class="form-control"  placeholder="Password" required>
